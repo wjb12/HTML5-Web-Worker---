@@ -1,6 +1,6 @@
 #HTML5 Web Worker的使用
 Web Workers 是 HTML5 提供的一个javascript多线程解决方案，我们可以将一些大计算量的代码交由web Worker运行而不冻结用户界面。
-#一：如何使用Worker
+#一、如何使用Worker
 Web Worker的基本原理就是在当前javascript的主线程中，使用Worker类加载一个javascript文件来开辟一个新的线程，起到互不阻塞执行的效果，并且提供主线程和新线程之间数据交换的接口：postMessage，onmessage。
 -------
 ```javascript
@@ -52,7 +52,7 @@ worker新线程：
 1.通过postMessage( data ) 方法来向主线程发送数据。
 
 2.绑定onmessage方法来接收主线程发送过来的数据。
-##二：Worker能做什么
+##二、Worker能做什么
 知道了如何使用web worker ，那么它到底有什么用，可以帮我们解决那些问题呢。我们来看一个fibonacci数列的例子。
 
 大家知道在数学上，fibonacci数列被以递归的方法定义：F0=0，F1=1，Fn=F(n-1)+F(n-2)（n>=2，n∈N*），而javascript的常用实现为：
@@ -117,7 +117,7 @@ HTML页面：fibonacci.html
 
 ```
 
-##四：总结
+##三、总结
 
 web worker看起来很美好，但处处是魔鬼。
 
